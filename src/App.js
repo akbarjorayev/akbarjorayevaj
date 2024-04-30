@@ -11,7 +11,7 @@ export default function App() {
 
   useEffect(() => {
     async function loadData() {
-      let data = await load('me')
+      const data = await load('me')
       setAccount(data)
     }
     loadData()
