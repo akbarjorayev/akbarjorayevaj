@@ -4,23 +4,30 @@ import Avatar from './components/Avatar/Avatar'
 
 import { load } from './js/db/db'
 import { getAge } from './js/date/birthday'
+import { setTabIcon } from './js/utils/tabIcon'
 
 import './css/App.css'
 
 export default function App() {
-  const [account, setAccount] = useState({})
+  const [me, setMe] = useState({})
+  const [site, setSite] = useState({})
 
   useEffect(() => {
     async function loadData() {
-      const data = await load('me')
-      setAccount(data)
+      const dataMe = await load('me')
+      const dataSite = await load('site')
+
+      setMe(dataMe)
+      setSite(dataSite)
     }
     loadData()
   }, [])
 
+  setTabIcon(site.tabIcon?.img)
+
   return (
     <>
-      <Avatar img={account.img?.img} />
+      <Avatar img={me.img?.img} />
       <div>Akbar Jorayev</div>
       <div>
         <span>Born:</span>
