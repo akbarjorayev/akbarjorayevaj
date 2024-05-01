@@ -21,11 +21,7 @@ export default function App() {
   return (
     <>
       <Avatar img={account.img?.img} />
-      <div>
-        <span>{account.fName}</span>
-        <span> </span>
-        <span>{account.lName}</span>
-      </div>
+      <div>Akbar Jorayev</div>
       <div>
         <span>Born:</span>
         <span> </span>
