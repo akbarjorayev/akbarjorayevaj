@@ -1,2 +1,2 @@
-# akbarjorayevaj
+# Akbar Jorayev (AJ)
 About me!
