@@ -7,7 +7,7 @@ export function getAge() {
 
   const year = ageDate.getUTCFullYear() - 1970
   const month = ageDate.getUTCMonth()
-  const day = ageDate.getUTCDate() - 1
+  const day = ageDate.getUTCDate() - 2
 
   const res = `${year} years ${month} months ${day} days`
   return res
