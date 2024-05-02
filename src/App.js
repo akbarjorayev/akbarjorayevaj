@@ -32,7 +32,7 @@ export default function App() {
       <div>
         <span>Born:</span>
         <span> </span>
-        <span>23-02-2007</span>
+        <span>23-02-2007 Fri</span>
       </div>
       <div>
         <span>Age:</span>
