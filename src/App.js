@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import Avatar from './components/Avatar/Avatar'
+import SocialMedias from './components/SocialMedias/SocialMedias'
 
 import { load } from './js/db/db'
 import { getAge } from './js/date/birthday'
@@ -39,6 +40,7 @@ export default function App() {
         <span> </span>
         <span>{getAge()}</span>
       </div>
+      <SocialMedias />
     </>
   )
 }
