@@ -28,19 +28,26 @@ export default function App() {
 
   return (
     <>
-      <Avatar img={me.img?.img} />
-      <div>Akbar Jorayev</div>
-      <div>
-        <span>Born:</span>
-        <span> </span>
-        <span>23-02-2007 Fri</span>
+      <div className="con main list_x">
+        <div className="menu list_y d_f_ai_ce">
+          <Avatar img={me.img?.img} />
+          <b className="fz_large">Akbar Jorayev</b>
+          <div>
+            <span>Born:</span>
+            <span> </span>
+            <span>
+              23-02-2007 <span className="con_bg_df pd_tb_0 fz_mono">Fri</span>
+            </span>
+          </div>
+          <div>
+            <span>Age:</span>
+            <span> </span>
+            <span>{getAge()}</span>
+          </div>
+          <SocialMedias />
+        </div>
+        <div className="body">Body</div>
       </div>
-      <div>
-        <span>Age:</span>
-        <span> </span>
-        <span>{getAge()}</span>
-      </div>
-      <SocialMedias />
     </>
   )
 }

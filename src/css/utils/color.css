@@ -1,0 +1,13 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-color: #000;
+    --theme-color-not: #fff;
+  }
+
+  :root {
+    --bg: #414141;
+    --bg-dark: #232323;
+    --bg-hover: #373737;
+    --bg-active: #2c2c2c;
+  }
+}
