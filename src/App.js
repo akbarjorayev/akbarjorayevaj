@@ -31,7 +31,7 @@ export default function App() {
       <div className="con main list_x">
         <div className="menu list_y d_f_ai_ce">
           <Avatar img={me.img?.img} />
-          <b className="fz_large">Akbar Jorayev</b>
+          <b className="fz_large txt_gradient">Akbar Jorayev</b>
           <div>
             <span>Born:</span>
             <span> </span>
@@ -46,7 +46,6 @@ export default function App() {
           </div>
           <SocialMedias />
         </div>
-        <div className="body">Body</div>
       </div>
     </>
   )
