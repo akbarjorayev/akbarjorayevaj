@@ -9,3 +9,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+a {
+  --color: #4b5edd;
+  color: var(--color);
+
+  &:hover {
+    --color: #7484eb;
+  }
+
+  &:active {
+    --color: #2035b9;
+  }
+}
