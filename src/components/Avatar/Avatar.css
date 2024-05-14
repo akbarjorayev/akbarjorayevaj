@@ -1,5 +1,26 @@
-.avatar {
+.avatar_con {
   width: 200px;
   aspect-ratio: 1;
+  position: relative;
   border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(#fff -125%, var(--gradient-3));
+  isolation: isolate;
+  pointer-events: none;
+
+  & img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.avatar_con span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  font-weight: 600;
+  z-index: -1;
 }
