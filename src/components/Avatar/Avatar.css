@@ -1,5 +1,5 @@
 .avatar_con {
-  width: 200px;
+  width: var(--avatar-size);
   aspect-ratio: 1;
   position: relative;
   border-radius: 50%;
@@ -23,4 +23,45 @@
   font-size: 5em;
   font-weight: 600;
   z-index: -1;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 0;
+    aspect-ratio: 1;
+    background-color: var(--gradient-4);
+    z-index: -1;
+    animation: disappear 2s infinite;
+  }
+
+  &::after {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes disappear {
+  to {
+    width: var(--avatar-size);
+    opacity: 0;
+  }
+}
+
+:root {
+  --avatar-size: 200px;
+}
+
+.avatar_con:has(img) {
+  background: none;
+}
+
+.avatar_con:has(img) span {
+  &::after,
+  &::before {
+    animation-play-state: paused;
+  }
 }
