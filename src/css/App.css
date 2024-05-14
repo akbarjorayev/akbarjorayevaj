@@ -40,6 +40,10 @@ body {
   height: 100%;
 }
 
+.is_phone #root > .con {
+  flex-direction: column;
+}
+
 .body {
   flex: 1;
 }

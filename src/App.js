@@ -6,12 +6,14 @@ import SocialMedias from './components/SocialMedias/SocialMedias'
 import { load } from './js/db/db'
 import { getAge } from './js/date/birthday'
 import { setTabIcon } from './js/utils/tabIcon'
+import { deviceIsPhone } from './js/utils/device'
 
 import './css/App.css'
 
 export default function App() {
   const [me, setMe] = useState({})
   const [site, setSite] = useState({})
+  const isPhone = deviceIsPhone()
 
   useEffect(() => {
     async function loadData() {
@@ -22,6 +24,10 @@ export default function App() {
       setSite(dataSite)
     }
     loadData()
+  }, [])
+
+  useEffect(() => {
+    if (isPhone) document.body.classList.add('is_phone')
   }, [])
 
   setTabIcon(site.tabIcon?.img)
