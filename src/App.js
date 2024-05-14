@@ -21,6 +21,7 @@ export default function App() {
     "Man who doesn't like ; 🧠",
     'Future employee at Google 🚀',
   ]
+  const resumeID = '1b3trRmLHzgsA4eDn3CzQ5a0IlXxdSkIj'
 
   useEffect(() => {
     async function loadData() {
@@ -91,6 +92,28 @@ export default function App() {
                 </a>
                 📞
               </div>
+            </div>
+          </div>
+          <div className="list_y">
+            <div>
+              <b>Resume</b>
+              <hr />
+            </div>
+            <div className="list_x cv">
+              <a
+                href={`https://drive.google.com/file/d/${resumeID}/view?usp=drivesdk`}
+                rel="noreferrer"
+                className="con_bg_df con_ha"
+              >
+                View
+              </a>
+              <a
+                href={`https://drive.google.com/u/0/uc?id=${resumeID}&export=download`}
+                rel="noreferrer"
+                className="con_bg_df con_ha"
+              >
+                Download
+              </a>
             </div>
           </div>
         </div>
