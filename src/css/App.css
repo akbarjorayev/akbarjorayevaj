@@ -35,17 +35,20 @@ body {
   overflow: hidden;
 }
 
+.body {
+  flex: 1;
+  max-width: 600px;
+}
+
 #root,
 #root > .con {
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.is_phone #root > .con {
+.con {
   flex-direction: column;
-}
-
-.body {
-  flex: 1;
 }
 
 .devide_half {
