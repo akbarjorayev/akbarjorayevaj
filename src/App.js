@@ -63,6 +63,21 @@ export default function App() {
               <div>Future employee at Google 🚀</div>
             </div>
           </div>
+          <div className="list_y">
+            <div>
+              <b>Contact me</b>
+              <hr />
+            </div>
+            <div>
+              <div>
+                Email:{' '}
+                <a href="mailto:akbarjonjorayev001@gmail.com" target="_blank">
+                  akbarjonjorayev001@gmail.com
+                </a>
+                📧
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
