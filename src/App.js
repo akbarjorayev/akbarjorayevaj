@@ -6,17 +6,15 @@ import SocialMedias from './components/SocialMedias/SocialMedias'
 import { load } from './js/db/db'
 import { getAge } from './js/date/birthday'
 import { setTabIcon } from './js/utils/tabIcon'
-import { deviceIsPhone } from './js/utils/device'
 
 import './css/App.css'
 
 export default function App() {
   const [me, setMe] = useState({})
   const [site, setSite] = useState({})
-  const isPhone = deviceIsPhone()
   const aboutMe = [
     'Software engineer 💻',
-    'Studying Computer Science, Physics and Mathematics 📚',
+    'Studying Computer Science, Physics and Mathematics 🎓',
     'Working on various projects using (HTML, CSS) (JS, NodeJS, ReactJs) 🌐',
     "Man who doesn't like ; 🧠",
     'Future employee at Google 🚀',
@@ -32,10 +30,6 @@ export default function App() {
       setSite(dataSite)
     }
     loadData()
-  }, [])
-
-  useEffect(() => {
-    if (isPhone) document.body.classList.add('is_phone')
   }, [])
 
   setTabIcon(site.tabIcon?.img)
@@ -66,32 +60,30 @@ export default function App() {
               <b>About me</b>
               <hr />
             </div>
-            <div>
-              {aboutMe.map((item, i) => (
-                <div key={i}>{item}</div>
-              ))}
-            </div>
+            {aboutMe.map((item, i) => (
+              <div className="con_bg_df" key={i}>
+                {item}
+              </div>
+            ))}
           </div>
           <div className="list_y">
             <div>
               <b>Contact me</b>
               <hr />
             </div>
-            <div>
-              <div>
-                Email:{' '}
-                <a href="mailto:akbarjonjorayev001@gmail.com" rel="noreferrer">
-                  akbarjonjorayev001@gmail.com
-                </a>
-                📧
-              </div>
-              <div>
-                Tel:{' '}
-                <a href="tel:+998931672923" rel="noreferrer">
-                  +998931672923
-                </a>
-                📞
-              </div>
+            <div className="con_bg_df">
+              Email:{' '}
+              <a href="mailto:akbarjonjorayev001@gmail.com" rel="noreferrer">
+                akbarjonjorayev001@gmail.com
+              </a>
+              📧
+            </div>
+            <div className="con_bg_df">
+              Tel:{' '}
+              <a href="tel:+998931672923" rel="noreferrer">
+                +998931672923
+              </a>
+              📞
             </div>
           </div>
           <div className="list_y">
