@@ -35,6 +35,11 @@ body {
   overflow: hidden;
 }
 
-#root {
+#root,
+#root > .con {
   height: 100%;
+}
+
+.body {
+  flex: 1;
 }
