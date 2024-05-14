@@ -14,6 +14,13 @@ export default function App() {
   const [me, setMe] = useState({})
   const [site, setSite] = useState({})
   const isPhone = deviceIsPhone()
+  const aboutMe = [
+    'Software engineer 💻',
+    'Studying Computer Science, Physics and Mathematics 📚',
+    'Working on various projects using (HTML, CSS) (JS, NodeJS, ReactJs) 🌐',
+    "Man who doesn't like ; 🧠",
+    'Future employee at Google 🚀',
+  ]
 
   useEffect(() => {
     async function loadData() {
@@ -59,14 +66,9 @@ export default function App() {
               <hr />
             </div>
             <div>
-              <div>Software engineer 💻</div>
-              <div>Studying Computer Science, Physics and Mathematics 📚</div>
-              <div>
-                Working on various projects using (HTML, CSS) (JS, NodeJS,
-                ReactJs) 🌐
-              </div>
-              <div>Man who doesn't like ; 🧠</div>
-              <div>Future employee at Google 🚀</div>
+              {aboutMe.map((item, i) => (
+                <div key={i}>{item}</div>
+              ))}
             </div>
           </div>
           <div className="list_y">
@@ -77,18 +79,14 @@ export default function App() {
             <div>
               <div>
                 Email:{' '}
-                <a
-                  href="mailto:akbarjonjorayev001@gmail.com"
-                  rel="noreferrer"
-                  target="_blank"
-                >
+                <a href="mailto:akbarjonjorayev001@gmail.com" rel="noreferrer">
                   akbarjonjorayev001@gmail.com
                 </a>
                 📧
               </div>
               <div>
                 Tel:{' '}
-                <a href="tel:+998931672923" rel="noreferrer" target="_blank">
+                <a href="tel:+998931672923" rel="noreferrer">
                   +998931672923
                 </a>
                 📞
