@@ -28,7 +28,7 @@ export default function AboutMe() {
       const dataMe = localMe ? localMe : await load('me')
 
       setMe(dataMe)
-      saveLocal('aboutMe', dataMe)
+      if (!localMe) saveLocal('aboutMe', dataMe)
     }
     loadData()
   }, [])
