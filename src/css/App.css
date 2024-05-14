@@ -1,3 +1,13 @@
+@import url('./utils/color.css');
+@import url('./utils/containers.css');
+@import url('./utils/border.css');
+@import url('./utils/padding.css');
+@import url('./utils/margin.css');
+@import url('./utils/list.css');
+@import url('./utils/display.css');
+@import url('./utils/font.css');
+@import url('./utils/txt.css');
+
 *,
 *::before,
 *::after {
@@ -22,9 +32,8 @@ body {
   background-color: var(--bg-dark);
   color: var(--theme-color-not);
   height: 100%;
-  overflow: hidden;
-}
 
-#root {
-  height: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
