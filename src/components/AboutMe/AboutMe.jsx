@@ -7,6 +7,8 @@ import { load } from '../../js/db/db'
 import { setTabIcon } from '../../js/utils/tabIcon'
 import { getAge } from '../../js/date/birthday'
 
+import './AboutMe.css'
+
 export default function AboutMe() {
   const [me, setMe] = useState({})
   const [site, setSite] = useState({})
