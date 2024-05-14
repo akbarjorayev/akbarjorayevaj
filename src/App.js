@@ -71,10 +71,21 @@ export default function App() {
             <div>
               <div>
                 Email:{' '}
-                <a href="mailto:akbarjonjorayev001@gmail.com" target="_blank">
+                <a
+                  href="mailto:akbarjonjorayev001@gmail.com"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   akbarjonjorayev001@gmail.com
                 </a>
                 📧
+              </div>
+              <div>
+                Tel:{' '}
+                <a href="tel:+998931672923" rel="noreferrer" target="_blank">
+                  +998931672923
+                </a>
+                📞
               </div>
             </div>
           </div>
