@@ -4,7 +4,7 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  background: linear-gradient(#fff -125%, var(--gradient-3));
+  background: linear-gradient(var(--theme-color-not) -125%, var(--gradient-3));
   isolation: isolate;
   pointer-events: none;
 
@@ -12,6 +12,8 @@
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+    opacity: 0;
+    animation: opaTo1 1s ease forwards;
   }
 }
 
@@ -36,18 +38,11 @@
     aspect-ratio: 1;
     background-color: var(--gradient-4);
     z-index: -1;
-    animation: disappear 2s infinite;
+    animation: disappear 2s 0.1s infinite;
   }
 
   &::after {
     animation-delay: 0.4s;
-  }
-}
-
-@keyframes disappear {
-  to {
-    width: var(--avatar-size);
-    opacity: 0;
   }
 }
 
@@ -63,5 +58,18 @@
   &::after,
   &::before {
     animation-play-state: paused;
+  }
+}
+
+@keyframes disappear {
+  to {
+    width: var(--avatar-size);
+    opacity: 0;
+  }
+}
+
+@keyframes opaTo1 {
+  to {
+    opacity: 1;
   }
 }
