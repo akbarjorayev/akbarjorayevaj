@@ -46,6 +46,24 @@ export default function App() {
           </div>
           <SocialMedias />
         </div>
+        <div className="con body list_y">
+          <div className="list_y">
+            <div>
+              <b>About me</b>
+              <hr />
+            </div>
+            <div>
+              <div>Software engineer 💻</div>
+              <div>Studying Computer Science, Physics and Mathematics 📚</div>
+              <div>
+                Working on various projects using (HTML, CSS) (JS, NodeJS,
+                ReactJs) 🌐
+              </div>
+              <div>Man who doesn't like ; 🧠</div>
+              <div>Future employee at Google 🚀</div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )
