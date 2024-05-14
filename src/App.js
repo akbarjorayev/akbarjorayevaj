@@ -99,7 +99,7 @@ export default function App() {
               <b>Resume</b>
               <hr />
             </div>
-            <div className="list_x cv">
+            <div className="list_x devide_half">
               <a
                 href={`https://drive.google.com/file/d/${resumeID}/view?usp=drivesdk`}
                 rel="noreferrer"
@@ -113,6 +113,21 @@ export default function App() {
                 className="con_bg_df con_ha"
               >
                 Download
+              </a>
+            </div>
+          </div>
+          <div className="list_y">
+            <div>
+              <b>Projects</b>
+              <hr />
+            </div>
+            <div className="list_x devide_half">
+              <a
+                href="https://quran-app-id.web.app/"
+                rel="noreferrer"
+                className="con_bg_df con_ha"
+              >
+                AJ-Quran
               </a>
             </div>
           </div>

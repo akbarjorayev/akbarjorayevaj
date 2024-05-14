@@ -48,8 +48,14 @@ body {
   flex: 1;
 }
 
-.cv > * {
-  width: 50%;
+.devide_half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mar-small);
+}
+
+.devide_half > * {
+  width: 100%;
   display: grid;
   place-items: center;
   color: inherit;
