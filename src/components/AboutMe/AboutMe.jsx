@@ -6,6 +6,7 @@ import SocialMedias from '../SocialMedias/SocialMedias'
 import { load } from '../../js/db/db'
 import { setTabIcon } from '../../js/utils/tabIcon'
 import { getAge } from '../../js/date/birthday'
+import { loadLocal, saveLocal } from '../../js/db/localStorage'
 
 import './AboutMe.css'
 
@@ -22,11 +23,19 @@ export default function AboutMe() {
   const resumeID = '1b3trRmLHzgsA4eDn3CzQ5a0IlXxdSkIj'
 
   useEffect(() => {
+    const localMe = loadLocal('aboutMe')
     async function loadData() {
-      const dataMe = await load('me')
-      const dataSite = await load('site')
+      const dataMe = localMe ? localMe : await load('me')
 
       setMe(dataMe)
+      if (!localMe) saveLocal('aboutMe', dataMe)
+    }
+    loadData()
+  }, [])
+
+  useEffect(() => {
+    async function loadData() {
+      const dataSite = await load('site')
       setSite(dataSite)
     }
     loadData()
