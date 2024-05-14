@@ -32,7 +32,10 @@ body {
   background-color: var(--bg-dark);
   color: var(--theme-color-not);
   height: 100%;
-  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .body {
@@ -42,7 +45,6 @@ body {
 
 #root,
 #root > .con {
-  height: 100%;
   display: flex;
   justify-content: center;
 }
