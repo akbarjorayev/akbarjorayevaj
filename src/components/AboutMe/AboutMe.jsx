@@ -20,7 +20,7 @@ export default function AboutMe() {
     "Man who doesn't like ; 🧠",
     'Future employee at Google 🚀',
   ]
-  const resumeID = '1b3trRmLHzgsA4eDn3CzQ5a0IlXxdSkIj'
+  const resumeID = '13YYo33eb9UYtUJ1GydfaIOsSY268qwCO'
 
   useEffect(() => {
     const localMe = loadLocal('aboutMe')
