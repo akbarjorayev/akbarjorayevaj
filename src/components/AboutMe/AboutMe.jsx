@@ -77,6 +77,24 @@ export default function AboutMe() {
           </div>
           <div className="list_y">
             <div>
+              <b>Skills</b>
+              <hr />
+            </div>
+            <div className="con_bg_df skills_con">
+              <div className="con_bg_df dev_lang html">HTML</div>
+              <div className="con_bg_df dev_lang css">CSS</div>
+            </div>
+            <div className="con_bg_df skills_con">
+              <div className="con_bg_df dev_lang js">Javascript</div>
+              <div className="con_bg_df dev_lang nodejs">NodeJS</div>
+              <div className="con_bg_df dev_lang reactjs">ReactJS</div>
+            </div>
+            <div className="con_bg_df skills_con">
+              <div className="con_bg_df dev_lang firebase">Firebase</div>
+            </div>
+          </div>
+          <div className="list_y">
+            <div>
               <b>Contact me</b>
               <hr />
             </div>
